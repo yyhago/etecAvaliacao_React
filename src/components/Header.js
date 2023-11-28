@@ -1,30 +1,38 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import mortarboard from "../img/mortarboard.png"
+
 
 const Header = ({ openModal }) => {
   return (
     <HeaderContainer>
-      <Button onClick={openModal}>Postar Exemplo Tcc</Button>
+      <img src={mortarboard} alt="Logo" />
+      <Button onClick={openModal}>Postar Seu Exemplo de Tcc</Button>
     </HeaderContainer>
   );
 };
 
+
 const HeaderContainer = styled.div`
-  background-color: #ccc;
-  color: #fff;
-  padding: 10px;
+  display: flex;
+  background-color: #F2F2F2;
+  color: black;
+  padding: 0 2%;
+  
   text-align: center;
 `;
 
 const Button = styled.button`
-  background-color: #4caf50;
+  margin-top: 30px;
+  margin-left: 70%;
+  width: 240px;
+  height: 60px;
+  background-color: #68828C;
   color: white;
-  padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
   border: none;
   border-radius: 4px;
 `;
 
-
-export default Header;  
+export default Header;
